@@ -13,7 +13,6 @@
         $criarProdut = "UPDATE tblprodutos SET nomeProduto='$nome',descProduto='$desc',preco='$preco',peso='$peso',idcategoria=$categoria,ativo=$ativo WHERE idProduto= $id";
         $resultado = mysqli_query($connect,$criarProdut);
         if($resultado == true){
-            echo "Editado com sucesso, volte a pagina do administrador";
             header("Location: ./admArea.php");
             $_SESSION['msg'] = "<p class='msgPd'>Produto Editado com sucesso</p>";
         }

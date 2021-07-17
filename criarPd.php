@@ -11,7 +11,6 @@
         $criarProdut = "INSERT INTO tblprodutos(nomeProduto,preco,descProduto,peso,idcategoria,ativo) VALUES ('$nome','$preco','$desc','$peso','$categoria','$ativo')";
         $resultado = mysqli_query($connect,$criarProdut);
         if($resultado == true){
-            echo "Registrado com sucesso, volte a pagina do administrador";
             header("Location: ./admArea.php");
             $_SESSION['msg'] = "<p class='msgPd'>Produto Criado com sucesso</p>";
         }

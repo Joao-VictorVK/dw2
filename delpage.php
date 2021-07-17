@@ -5,7 +5,6 @@
         $del = "DELETE from tblprodutos WHERE idProduto=$idProduto";
         $resultado = mysqli_query($connect,$del);
         if($resultado == true){
-            echo "Deletado com sucesso, volte a pagina do administrador";
             header("Location: ./admArea.php");
             $_SESSION['msg'] = "<p class='msgPd'>Produto Deletado com sucesso</p>";
         }

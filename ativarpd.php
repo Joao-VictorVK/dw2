@@ -5,9 +5,8 @@
     $ativar = "UPDATE tblprodutos SET ativo=1 WHERE idProduto= $id";
     $resultado = mysqli_query($connect,$ativar);
     if($resultado == true){
-        echo "Editado com sucesso, volte a pagina do administrador";
         header("Location: ./admArea.php");
-        $_SESSION['msg'] = "<p class='msgPd'>Produto Deletado com sucesso</p>";
+        $_SESSION['msg'] = "<p class='msgPd'>Produto ativado com sucesso</p>";
     }
     else{
         die("Erro ao inserir registro".mysqli_error($connect));
